@@ -16,17 +16,19 @@ public class App
 {
     public static void main( String[] args )
     {
-        ClassPathXmlApplicationContext context =
+        //load the spring configuration file
+      /*  ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-
-             /*   AnnotationConfigApplicationContext context =
+*/
+                AnnotationConfigApplicationContext context =
                         new AnnotationConfigApplicationContext(AppConfig.class);
-        Arrays.stream(context.getBeanDefinitionNames())
+        /*Arrays.stream(context.getBeanDefinitionNames())
                 .forEach(System.out::println);
 
         AppUserStorage storage = context.getBean("appUserStorageImpl",AppUserStorage.class);
         System.out.println(storage.createNewAppUser("Nisse","Nys","nisse@gmail.com"));
  */
+        //retrieve the bean from the spring container
         CreateNewUserService service = context.getBean(CreateNewUserService.class);
         System.out.println(service.createNewAppUser());
     }

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-
+@Component
 public class AppUserStorageListImpl implements AppUserStorage {
 
     private List<AppUser> appUsers;
