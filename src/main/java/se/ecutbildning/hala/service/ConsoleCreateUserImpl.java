@@ -13,9 +13,14 @@ public class ConsoleCreateUserImpl implements CreateNewUserService {
     }
     private AppUserStorage appUserStorage;
 
-    public ConsoleCreateUserImpl(AppUserStorage appUserStorage){
+   /* public ConsoleCreateUserImpl(AppUserStorage appUserStorage){
+        this.appUserStorage = appUserStorage;
+    }*/
+
+    public void setAppUserStorage(AppUserStorage appUserStorage){
         this.appUserStorage = appUserStorage;
     }
+
     @Override
     public AppUser createNewAppUser() {
         System.out.println("Enter a first name: ");

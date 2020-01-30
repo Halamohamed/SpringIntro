@@ -11,8 +11,11 @@
 
   <bean id="appUserStorageImpl" class="se.ecutbildning.hala.data.AppUserStorageListImpl"/>
 
-  <bean id="consoleCreateUserImpl" class="se.ecutbildning.hala.service.ConsoleCreateUserImpl">
+ <!-- <bean id="consoleCreateUserImpl" class="se.ecutbildning.hala.service.ConsoleCreateUserImpl">
     <constructor-arg ref="appUserStorageImpl"/>
+  </bean>-->
+  <bean id="consoleCreateUserImpl" class="se.ecutbildning.hala.service.ConsoleCreateUserImpl">
+    <property name="appUserStorage" ref="appUserStorageImpl"/>
   </bean>
 
 </beans>
