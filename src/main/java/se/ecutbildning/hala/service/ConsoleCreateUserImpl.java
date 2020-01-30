@@ -14,12 +14,12 @@ public class ConsoleCreateUserImpl implements CreateNewUserService {
         scanner = new Scanner(System.in);
     }
     private AppUserStorage appUserStorage;
-
-    @Autowired
+    //Annotation constructor injection @Autowired
     public ConsoleCreateUserImpl(AppUserStorage appUserStorage){
         this.appUserStorage = appUserStorage;
     }
 
+    @Autowired
     public void setAppUserStorage(AppUserStorage appUserStorage){
         this.appUserStorage = appUserStorage;
     }
