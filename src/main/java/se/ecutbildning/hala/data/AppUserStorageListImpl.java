@@ -1,11 +1,13 @@
 package se.ecutbildning.hala.data;
 
+import org.springframework.stereotype.Component;
 import se.ecutbildning.hala.model.AppUser;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 
 public class AppUserStorageListImpl implements AppUserStorage {
 
